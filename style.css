@@ -1,0 +1,97 @@
+.dots-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dots-2 .dot:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+
+.dots-3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dots-3 .dot:nth-of-type(1) {
+  align-self: flex-start;
+}
+
+.dots-3 .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.dots-3 .dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.dots-4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dots-4 .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.dots-5 {
+  display: flex;
+  justify-content: space-between;
+}
+.dots-5 .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.dots-5 .column:nth-of-type(2) {
+  justify-content: center;
+  
+
+}
+
+.dots-6 {
+  display: flex;
+  justify-content: space-between;
+
+}
+.dots-6 .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;}
+
+.container {
+  display: grid;
+  position: absolute;
+  grid-auto-flow: column;
+  bottom: 0;
+  margin-left: 200px;
+  margin-bottom: 40px;
+
+}
+.dice {
+  margin: 10px;
+  padding: 2px;
+  width: 90px;
+  height: 90px;
+  border-style: groove;
+
+}
+
+.dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 4px;
+  background-color: #333;
+}
