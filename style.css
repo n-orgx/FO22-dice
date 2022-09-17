@@ -1,97 +1,58 @@
-.dots-1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dots-2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dots-2 .dot:nth-of-type(2) {
-  align-self: flex-end;
-}
-
-
-.dots-3 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dots-3 .dot:nth-of-type(1) {
-  align-self: flex-start;
-}
-
-.dots-3 .dot:nth-of-type(2) {
-  align-self: center;
-}
-
-.dots-3 .dot:nth-of-type(3) {
-  align-self: flex-end;
-}
-
-.dots-4 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.dots-4 .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-}
-
-.dots-5 {
-  display: flex;
-  justify-content: space-between;
-}
-.dots-5 .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-}
-
-.dots-5 .column:nth-of-type(2) {
-  justify-content: center;
-  
-
-}
-
-.dots-6 {
-  display: flex;
-  justify-content: space-between;
-
-}
-.dots-6 .column {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;}
-
 .container {
   display: grid;
-  position: absolute;
-  grid-auto-flow: column;
-  bottom: 0;
-  margin-left: 200px;
-  margin-bottom: 40px;
-
-}
-.dice {
-  margin: 10px;
-  padding: 2px;
-  width: 90px;
-  height: 90px;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: -10px;
   border-style: groove;
-
+/* position: absolute;*/
 }
 
-.dot {
+aside {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin: 4px;
-  background-color: #333;
+  background-color: black;
+}
+
+/* */
+
+.dice {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "a . c"
+    "e g f"
+    "d . b";
+  margin: 1px;
+  border-style: groove;
+  border-color: red;
+  width: 100px;
+  height: 100px;
+  border-radius: 1%;
+}
+
+.dice aside:nth-child(2) {
+  grid-area: b;
+}
+
+.dice aside:nth-child(3) {
+  grid-area: c;
+}
+
+.dice aside:nth-child(4) {
+  grid-area: d;
+}
+
+.dice aside:nth-child(5) {
+  grid-area: e;
+}
+
+.dice aside:nth-child(6) {
+  grid-area: f;
+}
+
+.dice aside:nth-child(odd):last-child {
+  grid-area: g;
 }
